@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Gentle Start Plan, Sam - Autoimmune + Pain Sensitive</title>
+  <style>
+    :root {
+      --bg: #fff5fb;
+      --card: #ffffff;
+      --ink: #2f1b31;
+      --muted: #67506a;
+      --line: #f0d4e4;
+      --accent: #cd3e8f;
+      --accent-soft: #fff0f8;
+      --good: #2e8a58;
+      --warn: #9c5f20;
+      --danger: #ab3744;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #ffe2f2 0%, #fff5fb 38%, #fff9f2 100%);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .wrap {
+      width: min(980px, 94vw);
+      margin: 16px auto 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #cf3f92 0%, #ea6db2 45%, #ff9a7a 100%);
+      color: #fff9fc;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 14px 26px rgba(185, 50, 123, 0.2);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.22rem, 2.9vw, 1.8rem);
+      line-height: 1.35;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: #fff2fb;
+      font-size: 1rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      color: #fff9fe;
+    }
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      padding: 10px 0;
+      background: rgba(255, 245, 251, 0.96);
+      margin-bottom: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    .tab-btn {
+      border: 1px solid var(--line);
+      background: #fff7fc;
+      color: #7d2c58;
+      border-radius: 12px;
+      padding: 11px 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 0 rgba(214, 112, 169, 0.16);
+    }
+
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 8px 14px rgba(205, 62, 143, 0.25);
+    }
+
+    .panel {
+      display: none;
+      gap: 14px;
+    }
+
+    .panel.active {
+      display: grid;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(204, 88, 151, 0.08);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.35;
+      color: #8c2c62;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.35;
+      color: #6f2f53;
+    }
+
+    .card p {
+      margin: 8px 0 0;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    .list li {
+      margin: 7px 0;
+    }
+
+    .callout {
+      margin-top: 11px;
+      border-left: 5px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 11px;
+      padding: 12px 13px;
+      font-size: 0.95rem;
+    }
+
+    .callout.warn {
+      border-left-color: var(--warn);
+      background: #fff7ee;
+    }
+
+    .callout.danger {
+      border-left-color: var(--danger);
+      background: #fff3f1;
+    }
+
+    .callout.good {
+      border-left-color: var(--good);
+      background: #eefaf3;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fffafe;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 0.83rem;
+      color: #944071;
+      margin-bottom: 3px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .metric .value {
+      font-weight: 800;
+      color: #5f2a49;
+      font-size: 1rem;
+    }
+
+    .today-box {
+      margin-top: 12px;
+      border: 1px solid #f2c0dc;
+      background: linear-gradient(180deg, #fff2fa 0%, #fff9fd 100%);
+      border-radius: 13px;
+      padding: 14px;
+    }
+
+    .today-box h3 {
+      color: #9a2665;
+    }
+
+    .today-min {
+      margin-top: 7px;
+      font-size: 1.06rem;
+      font-weight: 900;
+      color: #6e1d4b;
+    }
+
+    .step-list {
+      margin: 9px 0 0;
+      padding-left: 22px;
+      font-size: 0.96rem;
+    }
+
+    .step-list li {
+      margin: 6px 0;
+    }
+
+    .select-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .week-select {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 8px 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1f3b53;
+      background: #fff;
+    }
+
+    .exercise-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .exercise {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .exercise-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .rx {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .how {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      font-size: 0.93rem;
+    }
+
+    .how li { margin: 5px 0; }
+
+    .how strong { color: #7b2253; }
+
+    .why {
+      margin-top: 10px;
+      border: 1px solid #efd0e0;
+      border-radius: 10px;
+      background: #fff7fc;
+      padding: 10px 11px;
+      font-size: 0.88rem;
+      color: #5f3651;
+      line-height: 1.5;
+    }
+
+    .why p {
+      margin: 4px 0;
+    }
+
+    .why strong {
+      color: #7d2857;
+    }
+
+    .actions {
+      margin-top: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 8px;
+      border: 1px solid #f0bad8;
+      background: #fff3fa;
+      color: #8f2e61;
+      padding: 6px 9px;
+      font-size: 0.83rem;
+      font-weight: 800;
+    }
+
+    .done {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 8px;
+      border: 1px dashed #9bc9b0;
+      background: #f0fbf4;
+      color: #296145;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .done input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      accent-color: var(--good);
+    }
+
+    .sets {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .set-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 2px 6px;
+      background: #fff9fe;
+      color: #6b2d4f;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .set-box input {
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      accent-color: var(--accent);
+    }
+
+    .subhead {
+      margin: 0 0 4px;
+      color: #9a2e68;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .badge {
+      display: inline-block;
+      border-radius: 7px;
+      padding: 2px 7px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #842f5d;
+      background: #fff1f8;
+      border: 1px solid #efc2db;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+      border: 1px solid #d8e4ec;
+      background: #f2f7fa;
+      border-radius: 6px;
+      padding: 1px 5px;
+    }
+
+    .panel-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #7c2958;
+      border-radius: 9px;
+      padding: 8px 12px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn.warn {
+      background: #fff4f8;
+      border-color: #f0bfdc;
+      color: #8b2d60;
+    }
+
+    .footer-note {
+      margin-top: 8px;
+      color: #51677b;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 850px) {
+      .tabs { grid-template-columns: repeat(2, 1fr); }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Your Gentle Start Plan, Sam: Tiny Steps, Real Progress</h1>
+      <p>Built for beginners. Every day has a minimum option. Sam, if you do only 5-8 minutes, that is a full win.</p>
+      <div class="pill-row">
+        <span class="pill">RPE target: 2-4/10 (easy-moderate)</span>
+        <span class="pill">Talk-test always</span>
+        <span class="pill">5-minute minimum option</span>
+        <span class="pill">No end-range loading</span>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Program tabs">
+      <button class="tab-btn active" data-tab="start">Start Here</button>
+      <button class="tab-btn" data-tab="day1">Today A</button>
+      <button class="tab-btn" data-tab="day2">Today B</button>
+      <button class="tab-btn" data-tab="day3">Today C</button>
+      <button class="tab-btn" data-tab="flare">Flare Plan</button>
+      <button class="tab-btn" data-tab="track">Tracking</button>
+    </nav>
+
+    <section class="panel active" id="start">
+      <article class="card">
+        <h2>What You Do Today, Sam (100% Clear)</h2>
+        <div class="today-box">
+          <h3>Sam, today you only need:</h3>
+          <p class="today-min" id="today-min-global">5-8 minutes total</p>
+          <ol class="step-list">
+            <li>Pick one tab: <strong>Today A</strong>, <strong>Today B</strong>, or <strong>Today C</strong>.</li>
+            <li>Do only the <strong>minimum plan</strong> at the top of that tab.</li>
+            <li>Tick the checkboxes. Stop. Done for the day.</li>
+          </ol>
+        </div>
+        <div class="callout good">
+          This plan is designed so tiny sessions still work. Consistency beats intensity.
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Medical Safety First</h2>
+        <div class="callout danger">
+          It is strongly advised that you clear this plan with a trained healthcare professional before starting. This plan was structured using your relevant medical context and evidence-informed guidance from the Arthritis Foundation, Spondylitis Association of America, Lupus Foundation of America, American Heart Association (AHA), World Health Organization (WHO), and CDC.
+        </div>
+        <ul class="list">
+          <li>Stop immediately for chest pain, faintness, severe breathlessness, severe palpitations, new neurological symptoms, or sharp joint pain.</li>
+          <li>Do not train on days with acute illness/fever, uncontrolled blood pressure, or active inflammatory flare.</li>
+          <li>Avoid breath-holding/straining. Keep breathing continuous during every rep.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Before Each Session (30-60 sec Check)</h2>
+        <div class="two-col">
+          <div>
+            <label class="done"><input type="checkbox" data-key="presession-dizzy" /> No dizziness/chest symptoms right now</label><br />
+            <label class="done"><input type="checkbox" data-key="presession-flare" /> No major inflammatory flare today</label><br />
+            <label class="done"><input type="checkbox" data-key="presession-joint" /> No hot/swollen painful joint at rest</label>
+          </div>
+          <div>
+            <label class="done"><input type="checkbox" data-key="presession-bp" /> BP is safe for light exercise today</label><br />
+            <label class="done"><input type="checkbox" data-key="presession-sleep" /> Enough energy for at least 5 minutes</label><br />
+            <label class="done"><input type="checkbox" data-key="presession-shoulder" /> Shoulder feels stable in low range</label>
+          </div>
+        </div>
+        <div class="callout warn">
+          Hypertension guardrail: if resting BP is around <span class="mono">180/110</span> or higher, skip exercise and seek medical advice. If unsure, choose only breathing + gentle mobility.
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>This Week Focus</h2>
+        <p class="small">Pick week number. Targets update so you always know what "enough" looks like.</p>
+        <div class="select-row">
+          <label for="week-select"><strong>Current week:</strong></label>
+          <select id="week-select" class="week-select">
+            <option value="1">Week 1</option>
+            <option value="2">Week 2</option>
+            <option value="3">Week 3</option>
+            <option value="4">Week 4</option>
+            <option value="5">Week 5</option>
+            <option value="6">Week 6</option>
+            <option value="7">Week 7</option>
+            <option value="8">Week 8</option>
+            <option value="9">Week 9</option>
+            <option value="10">Week 10</option>
+            <option value="11">Week 11</option>
+            <option value="12">Week 12</option>
+          </select>
+        </div>
+        <div class="callout" id="week-focus-text" style="margin-top: 10px;">
+          Week 1 focus: learn movements, keep pain calm, and complete 3 sessions even if each is short.
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>Session Length Goal</strong><span class="value" id="week-minutes">5-8 min per session</span></div>
+          <div class="metric"><strong>Strength Volume Goal</strong><span class="value" id="week-strength">1 set per exercise (or 3 exercises total)</span></div>
+          <div class="metric"><strong>Cardio Goal</strong><span class="value" id="week-cardio">5 min easy walk/cycle (talking pace)</span></div>
+          <div class="metric"><strong>This Week Success Marker</strong><span class="value" id="week-success">No post-session flare lasting beyond next day</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Effort Rules (Simple)</h2>
+        <ul class="list">
+          <li><strong>RPE target:</strong> stay between <strong>2 and 4 out of 10</strong> for almost all work.</li>
+          <li><strong>Pain target:</strong> stay between <strong>0 and 3 out of 10</strong> during and after training.</li>
+          <li><strong>Breathing rule:</strong> if you cannot speak a full sentence, effort is too high for this phase.</li>
+          <li><strong>Hypermobility rule:</strong> no deep stretching to end range, no bouncing, no forced positions.</li>
+          <li><strong>Shoulder rule:</strong> keep elbow close to body and arm below shoulder height for first 4-6 weeks.</li>
+        </ul>
+        <div class="callout">
+          <strong>What is RPE (effort out of 10)?</strong><br />
+          0 = complete rest, 1-2 = very easy, 3-4 = easy to moderate, 5-6 = hard, 7-8 = very hard, 9-10 = near maximal.
+          For this plan, stay mostly at <strong>RPE 2-4</strong>.
+        </div>
+        <div class="callout warn">
+          <strong>How to score pain out of 10:</strong><br />
+          0 = no pain, 1-2 = mild awareness, 3 = noticeable but manageable and settles quickly, 4 = too much for this plan (reduce range/reps now), 5+ or sharp pain = stop exercise.
+        </div>
+        <div class="callout good">
+          Minimum win is consistency. A 5-minute session done safely is a successful session.
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Equipment Needed</h2>
+        <ul class="list">
+          <li>Stable chair with back support</li>
+          <li>Wall space</li>
+          <li>Light resistance band</li>
+          <li>Mat or folded towel</li>
+          <li>Timer (phone)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Exercise Coverage Map (By Body Region)</h2>
+        <p class="small">Sam, use this map to see what is being trained and what is intentionally kept minimal in this phase.</p>
+        <div class="two-col">
+          <div>
+            <p class="subhead">Back + Core</p>
+            <ul class="list">
+              <li><strong>Lower back support:</strong> Cat-Cow, Seated Pelvic Tilt, Dead Bug Heel Tap, Hip Hinge to Wall</li>
+              <li><strong>Upper back/posture:</strong> Open Book, Band Row</li>
+              <li><strong>Core control:</strong> Dead Bug Heel Tap, Wall Bird-Dog, Diaphragmatic Breathing</li>
+            </ul>
+
+            <p class="subhead">Shoulders</p>
+            <ul class="list">
+              <li><strong>Shoulder stability:</strong> Wall Push-Up, Band Row, Shoulder External Rotation Isometric, Wall Bird-Dog</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="subhead">Hips + Legs</p>
+            <ul class="list">
+              <li><strong>Hips/glutes:</strong> Glute Bridge, Clamshell, Supported Split-Stance Weight Shift, Hip Hinge to Wall</li>
+              <li><strong>Quads/functional legs:</strong> Sit-to-Stand, Low Step-Up</li>
+              <li><strong>Calves/ankles:</strong> Calf Raise, Supported March In Place</li>
+            </ul>
+
+            <p class="subhead">Cardio Base</p>
+            <ul class="list">
+              <li><strong>Low-impact conditioning:</strong> Supported March, easy walk/cycle blocks, Gentle March Seated (rescue)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout warn">
+          <strong>Intentionally limited right now (for safety):</strong> heavy overhead pressing, jumping, running, deep loaded knee flexion, high-intensity intervals.
+        </div>
+        <div class="callout">
+          <strong>How to spot neglect:</strong> if one area feels weak or unaddressed for 2+ weeks, note it in tracking and adjust next block with a professional.
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="day1">
+      <article class="card">
+        <h2>Today A - Reset + Basics</h2>
+        <p class="small">Goal: loosen up and feel better, not push hard.</p>
+        <div class="today-box">
+          <h3>Minimum plan for today:</h3>
+          <p class="today-min"><span id="d1-duration">5-12 min</span> total</p>
+          <ol class="step-list">
+            <li>Do <strong>Breathing</strong> then <strong>Cat-Cow</strong> (1 set each).</li>
+            <li>Then do <strong>Sit-to-Stand</strong>, <strong>Wall Push-Up</strong>, and <strong>Glute Bridge</strong> (1 set each).</li>
+            <li>Optional easy walk/cycle for <span id="d1-cardio-min">5-8 min</span>.</li>
+          </ol>
+        </div>
+        <div class="callout">
+          If energy is very low today, do breathing + sit-to-stand only. That still counts.
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="subhead">Warm-up</p>
+        <div class="exercise-grid">
+          <div class="exercise">
+            <div class="exercise-head">
+              <div>
+                <h3>Diaphragmatic Breathing (Supine or Seated)</h3>
+                <p class="rx">1-2 rounds x 60-90 sec</p>
+              </div>
+              <span class="badge">Very Easy</span>
+            </div>
+            <ul class="how">
+              <li><strong>Start:</strong> Lie on a mat with knees bent and feet flat, or sit with back supported.</li>
+              <li><strong>Hand position:</strong> One hand on chest, one hand on lower belly.</li>
+              <li><strong>Breathe in:</strong> Inhale through nose for about 4 seconds so belly rises first.</li>
+              <li><strong>Breathe out:</strong> Exhale through mouth for about 6 seconds; keep jaw and shoulders relaxed.</li>
+              <li><strong>Stop if dizzy:</strong> Pause. Roll to one side before sitting up so shoulders and neck stay supported.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Diaphragm, deep core support muscles, and nervous-system down-regulation.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Breathing control lowers stress response and muscle guarding before movement.</p>
+              <p><strong>How this helps you, Sam:</strong> Makes sessions feel safer, lowers tension, and improves tolerance on low-energy days.</p>
+            </div>
+            <div class="actions">
+              <a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=diaphragmatic+breathing+exercise+physical+therapy">Video form check</a>
+              <div class="sets" data-ex="d1-breath" data-count="2"></div>
+              <label class="done"><input type="checkbox" data-key="d1-breath-done" />Done</label>
+            </div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head">
+              <div>
+                <h3>Cat-Cow (Small Range)</h3>
+                <p class="rx">1-2 sets x 6 slow reps</p>
+              </div>
+              <span class="badge">Back Mobility</span>
+            </div>
+            <ul class="how">
+              <li><strong>Start:</strong> On a mat, place hands under shoulders and knees under hips (tabletop).</li>
+              <li><strong>Round:</strong> Exhale and gently round upper/mid back. Tuck chin slightly.</li>
+              <li><strong>Arch:</strong> Inhale and gently arch lower back while lifting chest slightly.</li>
+              <li><strong>Tempo:</strong> Move slowly, pause 1 second in each position, for 6 controlled reps.</li>
+              <li><strong>Safety + get up:</strong> Stop if shoulders hurt. To get up, sit hips toward heels, move to side-sit, then push up with forearm and hand.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Spinal mobility (thoracic and lumbar segments) and gentle trunk control.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Slow segmental motion reduces stiffness without high joint load.</p>
+              <p><strong>How this helps you, Sam:</strong> Helps loosen upper/lower back and prepares you for the rest of the session.</p>
+            </div>
+            <div class="actions">
+              <a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=cat+cow+gentle+back+mobility">Video form check</a>
+              <div class="sets" data-ex="d1-catcow" data-count="2"></div>
+              <label class="done"><input type="checkbox" data-key="d1-catcow-done" />Done</label>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="subhead">Main Work</p>
+        <div class="exercise-grid">
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Sit-to-Stand From High Chair</h3><p class="rx">1-3 sets x 5-8 reps</p></div><span class="badge">Lower Body</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Sit near front of a high chair with feet hip-width and knees over ankles.</li>
+              <li><strong>Stand:</strong> Lean chest slightly forward, press feet into floor, and stand up slowly.</li>
+              <li><strong>Sit down:</strong> Reach hips back to chair and lower down slowly with control.</li>
+              <li><strong>Breathe:</strong> Exhale on the way up, inhale on the way down.</li>
+              <li><strong>Safety:</strong> Use hands on chair if needed. Stop for sharp knee or back pain.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Quadriceps, glutes, hamstrings, and core bracing muscles.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> This is a safe way to build leg strength for daily life patterns.</p>
+              <p><strong>How this helps you, Sam:</strong> Improves getting up from chairs, stairs, and overall confidence with less back strain.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=sit+to+stand+exercise+form+physical+therapy">Video form check</a><div class="sets" data-ex="d1-sitstand" data-count="3"></div><label class="done"><input type="checkbox" data-key="d1-sitstand-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Wall Push-Up</h3><p class="rx">1-3 sets x 5-8 reps</p></div><span class="badge">Shoulder Safe</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Stand facing wall, hands at chest height, slightly wider than shoulders.</li>
+              <li><strong>Lower:</strong> Inhale and bend elbows 30-45 degrees as chest moves toward wall.</li>
+              <li><strong>Push:</strong> Exhale and press wall away to return to start.</li>
+              <li><strong>Posture:</strong> Keep body in one line, no shrugging shoulders.</li>
+              <li><strong>Safety:</strong> Stop for shoulder pinch, instability, or sharp pain. Step closer to wall to make it easier.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Chest, triceps, serratus, and shoulder stabilizers (rotator cuff support).</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Closed-chain pressing on a wall is lower risk than floor pressing for a sensitive shoulder.</p>
+              <p><strong>How this helps you, Sam:</strong> Builds shoulder strength and control while minimizing re-injury risk.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=wall+push+up+proper+form">Video form check</a><div class="sets" data-ex="d1-wallpush" data-count="3"></div><label class="done"><input type="checkbox" data-key="d1-wallpush-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Glute Bridge (Double Leg)</h3><p class="rx">1-3 sets x 6-10 reps</p></div><span class="badge">Hip + Back Support</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Lie on mat, knees bent, feet flat, arms by your sides.</li>
+              <li><strong>Lift:</strong> Exhale, tighten glutes, and lift hips to a comfortable height.</li>
+              <li><strong>Hold:</strong> Pause 1-2 seconds while keeping ribs down.</li>
+              <li><strong>Lower:</strong> Inhale and lower slowly, one smooth motion.</li>
+              <li><strong>Safety + get up:</strong> If back pain or hamstring cramp appears, lower height. Roll to side to stand up safely.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Glutes, hamstrings, posterior chain, and pelvic stabilizers.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Stronger glutes reduce overload on lumbar spine and hips.</p>
+              <p><strong>How this helps you, Sam:</strong> Can decrease chronic low-back ache and improve hip stability while walking.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=glute+bridge+exercise+beginner+form">Video form check</a><div class="sets" data-ex="d1-bridge" data-count="3"></div><label class="done"><input type="checkbox" data-key="d1-bridge-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Supported March In Place</h3><p class="rx">1-3 sets x 20-40 sec</p></div><span class="badge">Gentle Cardio</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Stand tall and lightly hold a wall or chair.</li>
+              <li><strong>Move:</strong> Lift one knee a little, place it down, then switch sides.</li>
+              <li><strong>Tempo:</strong> Keep it slow and even, no bouncing.</li>
+              <li><strong>Breathe:</strong> Normal breathing; stay at easy talk pace.</li>
+              <li><strong>Safety:</strong> Stop and sit if dizzy, chest symptoms, or unusual palpitations appear.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Hip flexors, lower core, calf pump, and low-level cardio system.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Very gentle cardiovascular work improves circulation without impact.</p>
+              <p><strong>How this helps you, Sam:</strong> Builds baseline conditioning and energy tolerance with minimal joint stress.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=standing+march+exercise+beginner+form">Video form check</a><div class="sets" data-ex="d1-march" data-count="3"></div><label class="done"><input type="checkbox" data-key="d1-march-done" />Done</label></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="subhead">Finish</p>
+        <ul class="list">
+          <li>Easy walk or stationary bike: <strong id="d1-cardio">5-10 min</strong>, conversational pace.</li>
+          <li>Cool-down: 3 slow breaths + gentle shoulder rolls x 5.</li>
+        </ul>
+        <div class="panel-footer">
+          <span class="small">If fatigue spikes, finish after breathing and 1-2 exercises. That still counts.</span>
+          <button class="btn warn" data-reset="d1-">Reset Day 1 checks</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="day2">
+      <article class="card">
+        <h2>Today B - Core + Shoulder Stability + Hip Mobility</h2>
+        <p class="small">Goal: stronger support muscles with calm, controlled movement.</p>
+        <div class="today-box">
+          <h3>Minimum plan for today:</h3>
+          <p class="today-min"><span id="d2-duration">5-12 min</span> total</p>
+          <ol class="step-list">
+            <li>Do <strong>Open Book</strong> (1 set).</li>
+            <li>Do <strong>Band Row</strong> (1 set).</li>
+            <li>Do <strong>Dead Bug Heel Tap</strong> (1 set), then stop and tick done boxes.</li>
+          </ol>
+        </div>
+        <div class="callout">
+          Shoulder safety: keep elbow close to body and stop before any unstable feeling.
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="exercise-grid">
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Open Book (Thoracic Rotation)</h3><p class="rx">1-2 sets x 4-6 each side</p></div><span class="badge">Back Mobility</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Lie on side with hips and knees bent, knees stacked.</li>
+              <li><strong>Set position:</strong> Keep both knees touching to protect lower back.</li>
+              <li><strong>Move:</strong> Inhale and slowly open top arm and chest toward the other side.</li>
+              <li><strong>Return:</strong> Exhale and bring arm back to start with control.</li>
+              <li><strong>Safety + get up:</strong> Stop before shoulder pain. Roll to side, then push up with forearm and hand.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Thoracic mobility, chest tissue opening, and upper-back rotation control.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Improving thoracic movement reduces compensation through lower back and shoulder.</p>
+              <p><strong>How this helps you, Sam:</strong> Can ease upper-back stiffness and make shoulder movement feel less restricted.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=open+book+thoracic+rotation+exercise">Video form check</a><div class="sets" data-ex="d2-openbook" data-count="2"></div><label class="done"><input type="checkbox" data-key="d2-openbook-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Band Row (Elbows Close)</h3><p class="rx">1-3 sets x 6-10 reps</p></div><span class="badge">Shoulder Safe</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Anchor band at chest height and stand tall with soft knees.</li>
+              <li><strong>Pull:</strong> Exhale and draw elbows back close to your ribs.</li>
+              <li><strong>Pause:</strong> Hold 1 second, gently squeeze shoulder blades.</li>
+              <li><strong>Return:</strong> Inhale and slowly extend arms back to start.</li>
+              <li><strong>Safety:</strong> Stop for shoulder pinch, neck tension, or joint instability. Reduce band tension if needed.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Mid-back (rhomboids/traps), lats, rear shoulder, scapular stabilizers.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Postural pulling strength protects neck/shoulders and supports shoulder mechanics.</p>
+              <p><strong>How this helps you, Sam:</strong> Improves shoulder stability and tolerance for daily pulling/lifting tasks.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=band+row+proper+form+physical+therapy">Video form check</a><div class="sets" data-ex="d2-bandrow" data-count="3"></div><label class="done"><input type="checkbox" data-key="d2-bandrow-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Dead Bug Heel Tap (Modified)</h3><p class="rx">1-3 sets x 4-6 each side</p></div><span class="badge">Core Control</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Lie on back with knees bent at 90 degrees and arms up.</li>
+              <li><strong>Brace:</strong> Gently flatten lower back into the mat before each rep.</li>
+              <li><strong>Move:</strong> Exhale and lower one heel to tap floor, then return and switch sides.</li>
+              <li><strong>Control:</strong> Slow reps only; keep ribs down.</li>
+              <li><strong>Safety + get up:</strong> If lower back arches or hurts, shorten range. Roll to side to get up.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Deep core (transverse abdominis), obliques, and trunk-limb coordination.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Teaches spinal control while arms/legs move, which is back-protective.</p>
+              <p><strong>How this helps you, Sam:</strong> Can reduce back flare-ups during normal movement and improve core confidence.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=dead+bug+exercise+beginner+form">Video form check</a><div class="sets" data-ex="d2-deadbug" data-count="3"></div><label class="done"><input type="checkbox" data-key="d2-deadbug-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Hip Hinge To Wall</h3><p class="rx">1-3 sets x 6-8 reps</p></div><span class="badge">Hip Patterning</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Stand 15-20 cm from wall with back facing wall, hands on hips.</li>
+              <li><strong>Move back:</strong> Push hips backward until glutes touch wall lightly.</li>
+              <li><strong>Return:</strong> Press feet into floor and stand tall again.</li>
+              <li><strong>Posture:</strong> Keep chest open, knees soft, and spine neutral.</li>
+              <li><strong>Safety:</strong> Stop if lower-back pain increases. Keep range small and controlled.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Glutes, hamstrings, and safe hip-dominant movement patterning.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Re-trains bending mechanics so load goes to hips, not low back.</p>
+              <p><strong>How this helps you, Sam:</strong> Makes daily bending safer and can reduce pain from poor movement strategy.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=hip+hinge+to+wall+exercise+form">Video form check</a><div class="sets" data-ex="d2-hinge" data-count="3"></div><label class="done"><input type="checkbox" data-key="d2-hinge-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Calf Raise (Supported)</h3><p class="rx">1-3 sets x 8-12 reps</p></div><span class="badge">Lower Limb Endurance</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Stand tall, feet hip-width, fingers lightly on wall/chair.</li>
+              <li><strong>Lift:</strong> Exhale and rise onto balls of feet for 2 seconds.</li>
+              <li><strong>Hold:</strong> Pause 1 second at the top.</li>
+              <li><strong>Lower:</strong> Inhale and lower heels for 2-3 seconds.</li>
+              <li><strong>Safety:</strong> No bouncing. Stop for sharp Achilles/calf pain.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Calves, ankle stabilizers, and lower-limb endurance.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Ankle/calf strength supports walking efficiency and circulation.</p>
+              <p><strong>How this helps you, Sam:</strong> Improves walking tolerance and reduces early leg fatigue.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=standing+calf+raise+proper+form+beginner">Video form check</a><div class="sets" data-ex="d2-calf" data-count="3"></div><label class="done"><input type="checkbox" data-key="d2-calf-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Shoulder External Rotation Isometric</h3><p class="rx">2-3 sets x 10-20 sec each side</p></div><span class="badge">Stability</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Stand with elbow at side, bent 90 degrees, small towel under elbow.</li>
+              <li><strong>Press:</strong> Back of hand gently presses outward into wall or band.</li>
+              <li><strong>Effort:</strong> Use only 30-40% effort, not maximal force.</li>
+              <li><strong>Breathe:</strong> Keep normal breathing through the 10-20 second hold.</li>
+              <li><strong>Safety:</strong> Stop for sharp pain, popping, numbness, or shoulder shift.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Rotator cuff (especially external rotators) and shoulder joint stability.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Low-load isometrics strengthen shoulder support without risky movement range.</p>
+              <p><strong>How this helps you, Sam:</strong> Helps protect your previously injured shoulder and improve stability.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=shoulder+external+rotation+isometric+exercise">Video form check</a><div class="sets" data-ex="d2-isoer" data-count="3"></div><label class="done"><input type="checkbox" data-key="d2-isoer-done" />Done</label></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="panel-footer">
+          <span class="small">If shoulder is sore, skip rows and do breathing + lower-body drills only.</span>
+          <button class="btn warn" data-reset="d2-">Reset Day 2 checks</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="day3">
+      <article class="card">
+        <h2>Today C - Balance + Hip Loosening + Easy Capacity</h2>
+        <p class="small">Goal: move confidently and reduce stiffness without flare-ups.</p>
+        <div class="today-box">
+          <h3>Minimum plan for today:</h3>
+          <p class="today-min"><span id="d3-duration">5-15 min</span> total</p>
+          <ol class="step-list">
+            <li>Do <strong>Seated Pelvic Tilt</strong> (1 set).</li>
+            <li>Do <strong>Low Step-Up</strong> (1 set).</li>
+            <li>Do <strong>Supported Split-Stance Weight Shift</strong> (1 set).</li>
+            <li>Walk easy for <span id="d3-cardio-min">5-8 min</span> if energy allows.</li>
+          </ol>
+        </div>
+        <div class="callout">
+          Use wall/chair support the whole time if balance feels uncertain.
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="exercise-grid">
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Seated Pelvic Tilt</h3><p class="rx">1-2 sets x 8-10 reps</p></div><span class="badge">Back Relief</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Sit tall near front of chair, feet flat, hands on thighs.</li>
+              <li><strong>Move 1:</strong> Exhale and gently tuck pelvis (lower back flattens slightly).</li>
+              <li><strong>Move 2:</strong> Inhale and gently tip pelvis forward (small arch).</li>
+              <li><strong>Tempo:</strong> Slow, small movement only, 8-10 reps.</li>
+              <li><strong>Safety:</strong> Stop for shooting or radiating back/leg pain.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Deep core timing and gentle lumbar-pelvic motion control.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Small controlled pelvic motion reduces protective muscle stiffness.</p>
+              <p><strong>How this helps you, Sam:</strong> Can ease low-back stiffness and improve sitting tolerance.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=seated+pelvic+tilt+exercise">Video form check</a><div class="sets" data-ex="d3-pelvic" data-count="2"></div><label class="done"><input type="checkbox" data-key="d3-pelvic-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Low Step-Up (Supported)</h3><p class="rx">1-3 sets x 4-8 each side</p></div><span class="badge">Leg Strength</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Use a very low step. Hold rail/chair support before moving.</li>
+              <li><strong>Step up:</strong> Place full foot on step and press through heel to stand.</li>
+              <li><strong>Step down:</strong> Lower slowly back to floor with control.</li>
+              <li><strong>Alignment:</strong> Knee tracks over middle toes, not collapsing inward.</li>
+              <li><strong>Safety:</strong> Stop for sharp knee or hip pain. Reduce step height if needed.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Quads, glutes, calves, and balance support muscles.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> This is progressive functional leg training in a controlled height/range.</p>
+              <p><strong>How this helps you, Sam:</strong> Improves stair function, leg confidence, and general daily mobility.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=low+step+up+exercise+form+beginner">Video form check</a><div class="sets" data-ex="d3-stepup" data-count="3"></div><label class="done"><input type="checkbox" data-key="d3-stepup-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Supported Split-Stance Weight Shift</h3><p class="rx">1-3 sets x 20-30 sec each side</p></div><span class="badge">Hip Mobility</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> One foot forward, one foot back, both feet pointing ahead, hold support.</li>
+              <li><strong>Shift forward:</strong> Move weight gently forward until mild stretch only.</li>
+              <li><strong>Shift back:</strong> Return slowly to middle, then gently backward.</li>
+              <li><strong>Range:</strong> Stay out of deep end-range because of hypermobility.</li>
+              <li><strong>Safety:</strong> Stop if hip pinch or back pain appears.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Hip mobility, glute medius control, and front-back weight transfer mechanics.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Gradual weight shift restores hip motion without deep end-range loading.</p>
+              <p><strong>How this helps you, Sam:</strong> Reduces hip stiffness and improves gait comfort.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=split+stance+weight+shift+exercise">Video form check</a><div class="sets" data-ex="d3-shift" data-count="3"></div><label class="done"><input type="checkbox" data-key="d3-shift-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Wall Bird-Dog (Standing)</h3><p class="rx">1-3 sets x 4-6 each side</p></div><span class="badge">Core + Shoulder Control</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Hands on wall at shoulder height, step back slightly, soft knees.</li>
+              <li><strong>Brace:</strong> Tighten core gently so trunk stays still.</li>
+              <li><strong>Reach:</strong> Lift one arm and opposite leg in a small range, then return slowly.</li>
+              <li><strong>Breathe:</strong> Exhale on reach, inhale on return.</li>
+              <li><strong>Safety:</strong> Stop if shoulder or back pain appears. Keep movement smaller if unstable.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Core anti-rotation control, glute support, and shoulder stabilization.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Builds whole-body coordination with low load and high control.</p>
+              <p><strong>How this helps you, Sam:</strong> Supports back stability and shoulder control during daily tasks.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=standing+bird+dog+wall+exercise">Video form check</a><div class="sets" data-ex="d3-wallbird" data-count="3"></div><label class="done"><input type="checkbox" data-key="d3-wallbird-done" />Done</label></div>
+          </div>
+
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>Side-Lying Clamshell (No End-Range)</h3><p class="rx">1-3 sets x 8-12 each side</p></div><span class="badge">Hip Stability</span></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Lie on side with knees bent, heels together, hips stacked.</li>
+              <li><strong>Move:</strong> Exhale and lift top knee halfway only (no forcing range).</li>
+              <li><strong>Control:</strong> Pause 1 second, then lower slowly while inhaling.</li>
+              <li><strong>Position:</strong> Keep pelvis steady; do not roll backward.</li>
+              <li><strong>Safety + get up:</strong> Stop for hip pinch. Roll forward, use both hands and forearm to push up.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Glute medius/minimus and deep hip external rotators.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Hip stabilizers control pelvis and reduce knee/back compensation.</p>
+              <p><strong>How this helps you, Sam:</strong> Improves hip stability and may reduce lateral hip/low-back irritation.</p>
+            </div>
+            <div class="actions"><a class="video" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=clamshell+exercise+beginner+form">Video form check</a><div class="sets" data-ex="d3-clam" data-count="3"></div><label class="done"><input type="checkbox" data-key="d3-clam-done" />Done</label></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="subhead">Walking Block</p>
+        <ul class="list">
+          <li>Walk or easy cycle: <strong id="d3-cardio">5-12 min</strong> at conversation pace.</li>
+          <li>If symptoms rise, switch to 2 minutes on / 1 minute seated rest.</li>
+        </ul>
+        <div class="panel-footer">
+          <span class="small">Progress only when next-day symptoms are stable.</span>
+          <button class="btn warn" data-reset="d3-">Reset Day 3 checks</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="flare">
+      <article class="card">
+        <h2>Flare Day Algorithm (Green / Yellow / Red)</h2>
+        <div class="callout good"><strong>Green Day:</strong> Normal symptoms. Do full planned session.</div>
+        <div class="callout warn"><strong>Yellow Day:</strong> More fatigue/pain than usual but safe. Do 50% volume (half sets, slower tempo).</div>
+        <div class="callout danger"><strong>Red Day:</strong> Significant flare or warning signs. Skip strength. Do only 3-5 min breathing + gentle mobility, then rest.</div>
+      </article>
+
+      <article class="card">
+        <h2>3-Minute Rescue Routine</h2>
+        <div class="exercise-grid">
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>1) Breathing Reset</h3><p class="rx">60 sec</p></div></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Sit with back supported, both feet on floor, hands relaxed on thighs.</li>
+              <li><strong>Breathe in:</strong> Inhale through nose for 4 seconds.</li>
+              <li><strong>Breathe out:</strong> Exhale through mouth for 6 seconds (long and gentle).</li>
+              <li><strong>Tempo:</strong> Repeat for 6-8 slow breaths (about 60 seconds).</li>
+              <li><strong>Safety:</strong> Stop if dizzy, chest pain, or unusual breathlessness appears.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Breathing mechanics and autonomic calming response.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> This rapidly lowers arousal and helps symptom control during flare days.</p>
+              <p><strong>How this helps you, Sam:</strong> Gives you a safe "reset" when energy or symptoms are unstable.</p>
+            </div>
+            <div class="actions"><label class="done"><input type="checkbox" data-key="rescue-breath" />Done</label></div>
+          </div>
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>2) Seated Pelvic Tilt</h3><p class="rx">6 reps</p></div></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Sit tall near front of chair, feet flat, hands on thighs.</li>
+              <li><strong>Move 1:</strong> Exhale and gently tuck pelvis so low back flattens slightly.</li>
+              <li><strong>Move 2:</strong> Inhale and gently tip pelvis forward into a tiny arch.</li>
+              <li><strong>Tempo:</strong> 6 slow reps, no forcing range.</li>
+              <li><strong>Safety:</strong> Stop for sharp pain, radiating pain, or numbness.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Gentle lumbar-pelvic mobility and low-level core activation.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Keeps back moving with minimal load when full exercise is not possible.</p>
+              <p><strong>How this helps you, Sam:</strong> Prevents stiffness from escalating on bad symptom days.</p>
+            </div>
+            <div class="actions"><label class="done"><input type="checkbox" data-key="rescue-pelvic" />Done</label></div>
+          </div>
+          <div class="exercise">
+            <div class="exercise-head"><div><h3>3) Gentle March Seated</h3><p class="rx">45-60 sec</p></div></div>
+            <ul class="how">
+              <li><strong>Start:</strong> Sit tall with back supported, hold chair sides if needed.</li>
+              <li><strong>Move:</strong> Alternate lifting knees in a small range, one at a time.</li>
+              <li><strong>Breathe:</strong> Keep normal breathing and relaxed shoulders.</li>
+              <li><strong>Tempo:</strong> Slow and steady for 45-60 seconds.</li>
+              <li><strong>Safety:</strong> Stop immediately if symptoms escalate.</li>
+            </ul>
+            <div class="why">
+              <p><strong>Targets:</strong> Hip flexors, circulation, and very low-intensity cardio system.</p>
+              <p><strong>Why this is in your plan, Sam:</strong> Maintains blood flow and movement without impact or shoulder load.</p>
+              <p><strong>How this helps you, Sam:</strong> Supports conditioning and energy without provoking joints.</p>
+            </div>
+            <div class="actions"><label class="done"><input type="checkbox" data-key="rescue-march" />Done</label></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Stop + Seek Medical Review If</h2>
+        <ul class="list">
+          <li>New chest symptoms, severe shortness of breath, or fainting sensation.</li>
+          <li>Joint swelling/hot joint worsening after sessions for more than 24-48 hours.</li>
+          <li>Back or shoulder pain sharply worsens and does not settle with load reduction.</li>
+          <li>Any symptom that feels different from baseline disease pattern.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel" id="track">
+      <article class="card">
+        <h2>Weekly Structure (Simple)</h2>
+        <ul class="list">
+          <li><strong>Monday:</strong> Day 1</li>
+          <li><strong>Wednesday:</strong> Day 2</li>
+          <li><strong>Friday or Saturday:</strong> Day 3</li>
+          <li><strong>Optional on other days:</strong> 5-minute rescue routine or easy walk</li>
+        </ul>
+        <div class="callout">
+          If you miss a day, do not "catch up" with extra volume. Just continue with the next planned day.
+        </div>
+      </article>
+      <article class="card">
+        <h2>What To Track Each Session</h2>
+        <div class="two-col">
+          <div>
+            <label class="done"><input type="checkbox" data-key="track-completed" /> Session completed (yes/no)</label><br />
+            <label class="done"><input type="checkbox" data-key="track-talk" /> Stayed in talk-test zone</label><br />
+            <label class="done"><input type="checkbox" data-key="track-pain" /> Pain stayed at 0-3/10</label><br />
+            <label class="done"><input type="checkbox" data-key="track-nextday" /> Next-day symptoms stable</label>
+          </div>
+          <div>
+            <label class="done"><input type="checkbox" data-key="track-rhr" /> Resting heart rate logged</label><br />
+            <label class="done"><input type="checkbox" data-key="track-bp" /> Blood pressure logged</label><br />
+            <label class="done"><input type="checkbox" data-key="track-sleep" /> Sleep hours + quality logged</label><br />
+            <label class="done"><input type="checkbox" data-key="track-note" /> Notes logged (energy, flare, shoulder/back)</label>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Vitals and Objective Progress (Simple)</h2>
+        <ul class="list">
+          <li><strong>Resting heart rate (RHR):</strong> log in the morning, before caffeine, at least 4 days/week.</li>
+          <li><strong>Blood pressure (BP):</strong> log at least 3 days/week and before harder days.</li>
+          <li><strong>Sleep:</strong> log hours slept + sleep quality (1-5).</li>
+          <li><strong>Energy and pain:</strong> log daily energy (1-10) and pain (0-10).</li>
+        </ul>
+        <div class="callout">
+          <strong>Weekly 5-minute walk test (same day/time each week):</strong><br />
+          Warm up 2-3 minutes easy. Then walk <strong>5 minutes at 4.0 km/h</strong> (treadmill) or brisk flat walk equivalent.
+          Record: average HR, peak HR, RPE, pain during test, and 10-minute recovery feeling.
+        </div>
+        <div class="callout warn">
+          <strong>BP safety reminder:</strong> if resting BP is around <span class="mono">180/110</span> or higher, skip training and seek medical advice.
+          If around <span class="mono">180/120</span> with symptoms (chest pain, breathlessness, neuro symptoms), seek urgent care.
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Expected Progress If Consistent</h2>
+        <ul class="list">
+          <li><strong>Weeks 1-2:</strong> learns form, tolerates very short sessions.</li>
+          <li><strong>Weeks 3-6:</strong> less stiffness, slightly better daily energy, improved confidence.</li>
+          <li><strong>Weeks 7-10:</strong> can handle longer sessions, better movement control and posture.</li>
+          <li><strong>Weeks 11-12:</strong> stronger baseline and readiness for next progressive block.</li>
+        </ul>
+        <div class="callout warn">
+          With autoimmune disease, progress may be non-linear. Consistency and flare management matter more than perfect weeks.
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Global Controls</h2>
+        <div class="panel-footer">
+          <span class="small">All checkboxes and week selection save automatically on this browser/device.</span>
+          <button class="btn warn" id="reset-all">Reset all checks</button>
+        </div>
+        <p class="footer-note">Version: gentle-rehab-plan-v2 (February 2026)</p>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      function createStore() {
+        var mem = {};
+        var enabled = false;
+        try {
+          var t = '__friend_plan_test__';
+          window.localStorage.setItem(t, '1');
+          window.localStorage.removeItem(t);
+          enabled = true;
+        } catch (e) {
+          enabled = false;
+        }
+        return {
+          get: function (key) {
+            if (enabled) {
+              try { return window.localStorage.getItem(key); } catch (e) {}
+            }
+            return Object.prototype.hasOwnProperty.call(mem, key) ? mem[key] : null;
+          },
+          set: function (key, value) {
+            if (enabled) {
+              try { window.localStorage.setItem(key, String(value)); return; } catch (e) {}
+            }
+            mem[key] = String(value);
+          },
+          remove: function (key) {
+            if (enabled) {
+              try { window.localStorage.removeItem(key); return; } catch (e) {}
+            }
+            delete mem[key];
+          }
+        };
+      }
+
+      var store = createStore();
+      var buttons = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.panel');
+
+      function activate(tabId) {
+        var i;
+        for (i = 0; i < buttons.length; i += 1) {
+          buttons[i].classList.toggle('active', buttons[i].getAttribute('data-tab') === tabId);
+        }
+        for (i = 0; i < panels.length; i += 1) {
+          panels[i].classList.toggle('active', panels[i].id === tabId);
+        }
+        store.set('friend_plan_active_tab', tabId);
+      }
+
+      for (var b = 0; b < buttons.length; b += 1) {
+        (function (btn) {
+          btn.addEventListener('click', function () {
+            activate(btn.getAttribute('data-tab'));
+          });
+        })(buttons[b]);
+      }
+
+      var savedTab = store.get('friend_plan_active_tab');
+      if (savedTab && document.getElementById(savedTab)) {
+        activate(savedTab);
+      }
+
+      function weekCfg(week) {
+        if (week <= 2) {
+          return {
+            focus: 'Weeks 1-2: establish safety, learn movement patterns, and complete short sessions consistently.',
+            minutes: '5-8 min per session',
+            strength: '1 set per exercise (or choose any 3 exercises total)',
+            cardio: '5 min easy walk/cycle (talking pace)',
+            success: 'Finish 3 sessions/week with no next-day flare escalation',
+            d1: '5-10 min',
+            d2: '5-10 min',
+            d3: '5-12 min',
+            d1cardio: '5-8 min',
+            d3cardio: '5-8 min'
+          };
+        }
+        if (week <= 4) {
+          return {
+            focus: 'Weeks 3-4: gently expand tolerance while keeping symptoms stable.',
+            minutes: '8-12 min per session',
+            strength: '1-2 sets per exercise',
+            cardio: '8-10 min easy walk/cycle',
+            success: 'Fatigue improves and morning stiffness begins to ease',
+            d1: '8-14 min',
+            d2: '8-14 min',
+            d3: '8-15 min',
+            d1cardio: '8-10 min',
+            d3cardio: '8-10 min'
+          };
+        }
+        if (week <= 6) {
+          return {
+            focus: 'Weeks 5-6: consolidate foundation and improve confidence in movement.',
+            minutes: '12-16 min per session',
+            strength: '2 sets most exercises',
+            cardio: '10-12 min easy walk/cycle',
+            success: 'Can complete sessions without symptom spikes',
+            d1: '12-18 min',
+            d2: '12-18 min',
+            d3: '12-18 min',
+            d1cardio: '10-12 min',
+            d3cardio: '10-12 min'
+          };
+        }
+        if (week <= 8) {
+          return {
+            focus: 'Weeks 7-8: increase work quality and light endurance while preserving recovery.',
+            minutes: '15-20 min per session',
+            strength: '2 sets each exercise',
+            cardio: '12-15 min easy walk/cycle',
+            success: 'Less fear of movement and better daily function',
+            d1: '15-22 min',
+            d2: '15-22 min',
+            d3: '15-22 min',
+            d1cardio: '12-15 min',
+            d3cardio: '12-15 min'
+          };
+        }
+        if (week <= 10) {
+          return {
+            focus: 'Weeks 9-10: progress volume carefully, maintain pain and BP guardrails.',
+            minutes: '18-24 min per session',
+            strength: '2-3 sets as tolerated',
+            cardio: '15-18 min easy walk/cycle',
+            success: 'Improved stamina and fewer stiffness episodes',
+            d1: '18-26 min',
+            d2: '18-26 min',
+            d3: '18-26 min',
+            d1cardio: '15-18 min',
+            d3cardio: '15-18 min'
+          };
+        }
+        return {
+          focus: 'Weeks 11-12: consolidate gains and prepare next training block safely.',
+          minutes: '20-30 min per session',
+          strength: '2-3 sets, still submaximal',
+          cardio: '18-22 min easy walk/cycle',
+          success: 'Consistent weekly adherence with stable next-day recovery',
+          d1: '20-30 min',
+          d2: '20-30 min',
+          d3: '20-30 min',
+          d1cardio: '18-22 min',
+          d3cardio: '18-22 min'
+        };
+      }
+
+      function setText(id, value) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+
+      function updateWeekUI(weekNum) {
+        var c = weekCfg(weekNum);
+        setText('week-focus-text', c.focus);
+        setText('week-minutes', c.minutes);
+        setText('week-strength', c.strength);
+        setText('week-cardio', c.cardio);
+        setText('week-success', c.success);
+        setText('today-min-global', c.minutes);
+
+        setText('d1-duration', c.d1);
+        setText('d2-duration', c.d2);
+        setText('d3-duration', c.d3);
+        setText('d1-cardio', c.d1cardio);
+        setText('d3-cardio', c.d3cardio);
+        setText('d1-cardio-min', c.d1cardio);
+        setText('d3-cardio-min', c.d3cardio);
+      }
+
+      var weekSelect = document.getElementById('week-select');
+      if (weekSelect) {
+        var storedWeek = store.get('friend_plan_week');
+        var initialWeek = storedWeek ? parseInt(storedWeek, 10) : 1;
+        if (!(initialWeek >= 1 && initialWeek <= 12)) initialWeek = 1;
+        weekSelect.value = String(initialWeek);
+        updateWeekUI(initialWeek);
+        weekSelect.addEventListener('change', function () {
+          var nextWeek = parseInt(weekSelect.value, 10);
+          store.set('friend_plan_week', String(nextWeek));
+          updateWeekUI(nextWeek);
+        });
+      }
+
+      var allInputs = document.querySelectorAll('input[type="checkbox"][data-key]');
+      for (var i = 0; i < allInputs.length; i += 1) {
+        (function (input) {
+          var k = 'friend_plan_' + input.getAttribute('data-key');
+          input.checked = store.get(k) === '1';
+          input.addEventListener('change', function () {
+            store.set(k, input.checked ? '1' : '0');
+          });
+        })(allInputs[i]);
+      }
+
+      var setContainers = document.querySelectorAll('.sets[data-ex][data-count]');
+      for (var c = 0; c < setContainers.length; c += 1) {
+        (function (container) {
+          var ex = container.getAttribute('data-ex');
+          var count = parseInt(container.getAttribute('data-count'), 10);
+          var label = document.createElement('span');
+          label.textContent = 'Sets:';
+          container.appendChild(label);
+          for (var s = 1; s <= count; s += 1) {
+            var wrap = document.createElement('label');
+            wrap.className = 'set-box';
+            var box = document.createElement('input');
+            box.type = 'checkbox';
+            box.setAttribute('data-key', ex + '-set' + s);
+            var key = 'friend_plan_' + box.getAttribute('data-key');
+            box.checked = store.get(key) === '1';
+            box.addEventListener('change', (function (cb, storeKey) {
+              return function () {
+                store.set(storeKey, cb.checked ? '1' : '0');
+              };
+            })(box, key));
+            var txt = document.createElement('span');
+            txt.textContent = String(s);
+            wrap.appendChild(box);
+            wrap.appendChild(txt);
+            container.appendChild(wrap);
+          }
+        })(setContainers[c]);
+      }
+
+      var resetButtons = document.querySelectorAll('button[data-reset]');
+      for (var r = 0; r < resetButtons.length; r += 1) {
+        (function (btn) {
+          btn.addEventListener('click', function () {
+            var prefix = btn.getAttribute('data-reset');
+            var boxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var j = 0; j < boxes.length; j += 1) {
+              var key = boxes[j].getAttribute('data-key');
+              if (!key) continue;
+              if (key.indexOf(prefix) === 0) {
+                boxes[j].checked = false;
+                store.remove('friend_plan_' + key);
+              }
+            }
+          });
+        })(resetButtons[r]);
+      }
+
+      var resetAll = document.getElementById('reset-all');
+      if (resetAll) {
+        resetAll.addEventListener('click', function () {
+          var boxes = document.querySelectorAll('input[type="checkbox"]');
+          for (var j = 0; j < boxes.length; j += 1) {
+            var key = boxes[j].getAttribute('data-key');
+            if (!key) continue;
+            boxes[j].checked = false;
+            store.remove('friend_plan_' + key);
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
